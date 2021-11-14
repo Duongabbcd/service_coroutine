@@ -30,6 +30,7 @@ class CalculateService :Service() ,ICalculate{
 
     override fun onDestroy() {
         super.onDestroy()
+        coroutineScope.cancel()
     }
 
 }
